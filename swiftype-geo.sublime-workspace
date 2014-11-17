@@ -1,0 +1,342 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ima",
+				"image_url"
+			],
+			[
+				"pad",
+				"padding-left: "
+			],
+			[
+				"pa",
+				"padding-left: "
+			],
+			[
+				"sw",
+				"swiftype_image"
+			],
+			[
+				"has_pos",
+				"has_post_thumbnail"
+			],
+			[
+				"author",
+				"author_img"
+			],
+			[
+				"ma",
+				"margin-bottom: "
+			],
+			[
+				"bor",
+				"border-top: "
+			],
+			[
+				"max",
+				"max-width: "
+			],
+			[
+				"border",
+				"border-bottom: "
+			],
+			[
+				"IN",
+				"inherit"
+			],
+			[
+				"the_po",
+				"the_post_thumbnail"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"json_",
+				"json_encode"
+			],
+			[
+				"m",
+				"margin-left: "
+			],
+			[
+				"font-",
+				"font-size: "
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 269.0,
+		"selected_items":
+		[
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 521.0
+	},
+	"console":
+	{
+		"height": 51.0,
+		"history":
+		[
+			" import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) ",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/flynnoconnor/Sites/Vagrants/vagrant-local/www/wordpress-default/wp-content/plugins/trunk"
+	],
+	"file_history":
+	[
+		"/Users/flynnoconnor/Sites/Repos/webber-naturals/WebberNaturals/_product-single-page.php",
+		"/Users/flynnoconnor/Sites/Repos/webber-naturals/WebberNaturals/_page-category-products.php",
+		"/Users/flynnoconnor/Sites/Repos/webber-naturals/WebberNaturals/single-scientists.php",
+		"/Users/flynnoconnor/Sites/Repos/webber-naturals/WebberNaturals/_page-careers.php",
+		"/Users/flynnoconnor/Sites/Repos/webber-naturals/WebberNaturals/functions.php",
+		"/Users/flynnoconnor/Sites/Repos/webber-naturals/WebberNaturals/single-coupons.php",
+		"/Users/flynnoconnor/Sites/Repos/webber-naturals/WebberNaturals/inc/PIM.php",
+		"/Users/flynnoconnor/Sites/Repos/webber-naturals/sftp-config.json",
+		"/Users/flynnoconnor/Sites/Repos/webber-naturals/WebberNaturals/content-news.php",
+		"/Users/flynnoconnor/Sites/Repos/webber-naturals/WebberNaturals/single-bloggers.php",
+		"/Users/flynnoconnor/Sites/Repos/webber-naturals/WebberNaturals/stylesheets/css/ie8-foundation.css",
+		"/Users/flynnoconnor/Sites/Repos/webber-naturals/WebberNaturals/header.php",
+		"/Users/flynnoconnor/Sites/Vagrants/vagrant-local/www/wordpress-default/wp-content/plugins/thoronas/drafts-for-friends.php",
+		"/Users/flynnoconnor/Downloads/WordPress-Plugin-Boilerplate-master/swiftype-search-geolocation/trunk/admin/class-swiftype-search-geolocation-admin.php",
+		"/Users/flynnoconnor/Downloads/WordPress-Plugin-Boilerplate-master/swiftype-search-geolocation/trunk/includes/class-swiftype-search-geolocation-activator.php",
+		"/Users/flynnoconnor/Downloads/WordPress-Plugin-Boilerplate-master/swiftype-search-geolocation/trunk/swiftype-search-geolocation.php",
+		"/Users/flynnoconnor/Downloads/WordPress-Plugin-Boilerplate-master/swiftype-search-geolocation/trunk/includes/class-swiftype-search-geolocation.php",
+		"/Users/flynnoconnor/Downloads/WordPress-Plugin-Boilerplate-master/swiftype-search-geolocation/trunk/public/class-swiftype-search-geolocation-public.php",
+		"/Users/flynnoconnor/Downloads/WordPress-Plugin-Boilerplate-master/swiftype-search-geolocation/trunk/admin/js/swiftype-search-geolocation-admin.js",
+		"/Users/flynnoconnor/Downloads/WordPress-Plugin-Boilerplate-master/swiftype-search-geolocation/trunk/includes/class-swiftype-search-geolocation-loader.php",
+		"/Users/flynnoconnor/Downloads/WordPress-Plugin-Boilerplate-master/swiftype-search-geolocation/trunk/includes/class-swiftype-search-geolocation-i18n.php",
+		"/Users/flynnoconnor/Downloads/WordPress-Plugin-Boilerplate-master/swiftype-search-geolocation/trunk/includes/class-swiftype-search-geolocation-deactivator.php",
+		"/Users/flynnoconnor/Sites/Factors/PGX-2014/PGX/_product-single-page.php",
+		"/Users/flynnoconnor/Sites/Factors/PGX-2014/PGX/single.php",
+		"/Users/flynnoconnor/Sites/Factors/PGX-2014/sftp-config.json",
+		"/Users/flynnoconnor/Sites/Factors/PGX-2014/PGX/inc/custom-post-types.php",
+		"/Users/flynnoconnor/Sites/Factors/PGX-2014/PGX/single-products.php",
+		"/Users/flynnoconnor/Sites/Factors/PGX-2014/PGX/stylesheets/scss/style-components/_header.scss",
+		"/Users/flynnoconnor/Sites/Factors/PGX-2014/PGX/stylesheets/css/main-style.css",
+		"/Users/flynnoconnor/Sites/Factors/PGX-2014/PGX/stylesheets/scss/style-components/_products.scss",
+		"/Users/flynnoconnor/Sites/Factors/PGX-2014/PGX/_page-new-products.php",
+		"/Users/flynnoconnor/Sites/Factors/PGX-2014/PGX/stylesheets/scss/main-style.scss",
+		"/Users/flynnoconnor/Desktop/Work Stuff/hockey hub/foundation-prototype/page-regional-landing.php",
+		"/Users/flynnoconnor/Desktop/Work Stuff/hockey hub/foundation-prototype/sidebar.php",
+		"/Users/flynnoconnor/Downloads/themeforest-5052602-newgate-agency-business-wordpress-theme/newgate/framework/admin/composer/cmsms-content-composer.php",
+		"/Users/flynnoconnor/Desktop/Work Stuff/hockey hub/foundation-prototype/widget-sponsors.php",
+		"/Users/flynnoconnor/Desktop/Work Stuff/hockey hub/foundation-prototype/widget-important-links.php",
+		"/Applications/MAMP/htdocs/camravancouver/wp-content/themes/arras2/home.php",
+		"/Applications/MAMP/htdocs/camravancouver/wp-content/themes/arras-theme/style.css",
+		"/Users/flynnoconnor/Desktop/Work Stuff/Camra Backup/camravancouver.ca/wp-config.php",
+		"/Users/flynnoconnor/Sites/Vagrants/vagrant-local/www/wordpress-default/wp-content/plugins/pronamic-google-maps/classes/Pronamic/Google/Maps/ApiClient.php",
+		"/Users/flynnoconnor/Sites/Vagrants/vagrant-local/www/wordpress-default/wp-content/plugins/pronamic-google-maps/views/meta-box.php",
+		"/Users/flynnoconnor/Sites/Vagrants/vagrant-local/www/wordpress-default/wp-content/plugins/pronamic-google-maps/classes/Pronamic/Google/Maps/MetaBox.php",
+		"/Users/flynnoconnor/Sites/Vagrants/vagrant-local/www/wordpress-default/wp-content/plugins/pronamic-google-maps/pronamic-google-maps.php",
+		"/Users/flynnoconnor/Sites/Vagrants/vagrant-local/www/wordpress-default/wp-content/plugins/pronamic-google-maps/classes/Pronamic/Google/Maps/Maps.php",
+		"/Users/flynnoconnor/Sites/Vagrants/vagrant-local/www/wordpress-default/wp-content/plugins/pronamic-google-maps/classes/Pronamic/Google/Maps/MapTypeId.php",
+		"/Users/flynnoconnor/Sites/Vagrants/vagrant-local/www/wordpress-default/wp-content/plugins/pronamic-google-maps/js/admin.js",
+		"/Users/flynnoconnor/Sites/Vagrants/vagrant-local/www/wordpress-default/wp-content/plugins/pronamic-google-maps/classes/Pronamic/Google/Maps/Admin.php",
+		"/Users/flynnoconnor/Sites/Vagrants/vagrant-local/www/wordpress-default/wp-content/plugins/pronamic-google-maps/classes/Pronamic/Google/Maps/Filters.php",
+		"/Users/flynnoconnor/Sites/Vagrants/vagrant-local/www/wordpress-default/wp-content/plugins/pronamic-google-maps/includes/functions.php",
+		"/Users/flynnoconnor/Sites/Vagrants/vagrant-local/www/wordpress-default/wp-content/plugins/pronamic-google-maps/uninstall.php",
+		"/Users/flynnoconnor/Downloads/pronamic-google-maps/pronamic-google-maps.php",
+		"/Users/flynnoconnor/Sites/Vagrants/vagrant-local/www/wordpress-default/wp-content/plugins/swiftype-geolocation /readme.txt",
+		"/Users/flynnoconnor/Sites/Vagrants/vagrant-local/www/wordpress-default/wp-content/themes/morning-gazette/searchform.php",
+		"/Users/flynnoconnor/Sites/Vagrants/vagrant-local/www/wordpress-default/wp-content/themes/morning-gazette/sidebar-footer.php",
+		"/Users/flynnoconnor/Sites/Vagrants/vagrant-local/www/wordpress-default/wp-content/themes/morning-gazette/page.php",
+		"/Users/flynnoconnor/Sites/Vagrants/vagrant-local/www/wordpress-default/wp-content/themes/morning-gazette/content-page.php",
+		"/Users/flynnoconnor/Sites/Vagrants/vagrant-local/www/wordpress-default/wp-content/themes/morning-gazette/styles/mainstyle.scss",
+		"/Users/flynnoconnor/Sites/Vagrants/vagrant-local/www/wordpress-default/wp-content/themes/morning-gazette/styles/mainstyle.css",
+		"/Users/flynnoconnor/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/flynnoconnor/Sites/index.html",
+		"/Users/flynnoconnor/Library/Application Support/Sublime Text 3/Packages/SFTP/SFTP.sublime-settings",
+		"/Users/flynnoconnor/Library/Application Support/Sublime Text 3/Packages/User/SFTP.sublime-settings"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/flynnoconnor/Sites/Repos/webber-naturals/WebberNaturals/stylesheets",
+			"/Users/flynnoconnor/Sites/Factors/PGX-2014/PGX",
+			"/Users/flynnoconnor/Sites/Vagrants/vagrant-local/www/wordpress-default/wp-content/plugins/pronamic-google-maps",
+			"/Users/flynnoconnor/Sites/Vagrants/vagrant-local/www/wordpress-default/wp-content/themes/morning-gazette"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"swiftype_menu",
+			"get_product_feature_image",
+			"swiftype",
+			"swift",
+			"new_product",
+			"content-area",
+			"console",
+			"product-item-warpper",
+			"product-item-wrapper",
+			"product-item-warpper",
+			"opacity",
+			"new-tooltip",
+			"entry-content",
+			"savePost",
+			"update_post_meta",
+			"getMetaData",
+			"pronamic_get_google_maps_meta",
+			"savePost",
+			"google-maps",
+			"enqueueScripts",
+			"admin_enqueue_scripts",
+			"PronamicGoogleMapsMetaBox",
+			"pgm-canvas",
+			"addMetaBox",
+			"Pronamic_Google_Maps_MetaBox",
+			"render",
+			"meta-box.php",
+			"id=\"pgm\"",
+			"Pronamic_Google_Maps_Maps",
+			"my-ajax-request",
+			"site-content",
+			"main-navigation",
+			"search-field",
+			"primary"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 124.0
+	},
+	"project": "swiftype-geo.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 307.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,0 +1,8 @@
+#swiftype-map {
+	height: 300px; 
+	width: 100%;
+}
+
+#swiftype-map img {
+ 	max-width: none; 
+ }
