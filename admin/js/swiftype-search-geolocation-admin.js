@@ -60,7 +60,6 @@
 	function render_current_map(){
 		var geo_lat = $('#swiftype-location-lat').val();
 		var geo_long = $('#swiftype-location-long').val();
-		if()
 		render_map(geo_lat, geo_long);
 	}
 	function display_geo_swiftype_modal() {
@@ -104,7 +103,7 @@
 
 		// because we're calling google via ajax we need to use a callback function. 
 		geocode_address($address, function(){
-			wp.media.editor.insert('[swiftype-geo-location lat="'+this.geo_lat+'" long="'+this.geo_long+'" zoom="'+$zoom+'" distance="'+$distance+'" search-form="'+$search_form+'" post-types="'+$post_types+'"]');
+			wp.media.editor.insert('[swiftype-geo-location lat="'+this.geo_lat+'" long="'+this.geo_long+'" zoom="'+$zoom+'" distance="'+$distance+'" search_form="'+$search_form+'" post_types="'+$post_types+'"]');
 		});
 		
 		destroy_geo_swiftype_modal(); 
