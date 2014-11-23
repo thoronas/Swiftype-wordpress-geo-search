@@ -6,3 +6,7 @@
 #swiftype-map img {
  	max-width: none; 
  }
+
+ .swiftype-map-marker {
+ 	color: #0000EE; 
+ }
