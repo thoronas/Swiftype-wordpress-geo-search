@@ -6,23 +6,26 @@
  * This file is read by WordPress to generate the plugin information in the plugin
  * Dashboard. This file also includes all of the dependencies used by the plugin,
  * registers the activation and deactivation functions, and defines a function
- * this starts the plugin.
+ * that starts the plugin.
  *
- * @link              http://example.com
  * @since             1.0.0
- * @package           Plugin_Name
+ * @package           Swiftype_Search_Geolocation
  *
  * @wordpress-plugin
  * Plugin Name:       Swiftype Search Geolocation Add-On
- * Plugin URI:        http://example.com/plugin-name-uri/
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress dashboard.
+ * Plugin URI:        https://github.com/thoronas/Swiftype-wordpress-geo-search
+ * Description:       Integrate geo-search into Swiftype functionality. 
  * Version:           1.0.0
  * Author:            Flynn O'Connor
- * Author URI:        http://example.com/
+ * Author URI:        http://fsquaredesign.com/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       swiftype-search-geolocation
- * Domain Path:       /languages
+ * 
+ * This plugin extends the Swiftype WordPress plugin. It allows users 
+ * to add latitude and longitude post meta which is added to the swiftype
+ * document builder. A shortcode displays a map of posts and includes a
+ * search form for searching for other posts. 
+ * 
  */
 
 // If this file is called directly, abort.

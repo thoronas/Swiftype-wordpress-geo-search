@@ -4,25 +4,25 @@
  * Define the internationalization functionality
  *
  * Loads and defines the internationalization files for this plugin
- * so that its ready for translation.
+ * so that it is ready for translation.
  *
  * @link       http://example.com
  * @since      1.0.0
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
+ * @package    Swiftype_Search_Geolocation
+ * @subpackage Swiftype_Search_Geolocation/includes
  */
 
 /**
  * Define the internationalization functionality.
  *
  * Loads and defines the internationalization files for this plugin
- * so that its ready for translation.
+ * so that it is ready for translation.
  *
  * @since      1.0.0
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
- * @author     Your Name <email@example.com>
+ * @package    Swiftype_Search_Geolocation
+ * @subpackage Swiftype_Search_Geolocation/includes
+ * @author     Flynn O'Connor <flynnoconnor@gmail.com>
  */
 class Swiftype_Search_Geolocation_i18n {
 

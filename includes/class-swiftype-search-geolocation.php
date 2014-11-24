@@ -25,7 +25,7 @@
  * @since      1.0.0
  * @package    Swiftype_Search_Geolocation
  * @subpackage Swiftype_Search_Geolocation/includes
- * @author     Your Name <email@example.com>
+ * @author     Flynn O'Connor <flynnoconnor@gmail.com>
  */
 class Swiftype_Search_Geolocation {
 
@@ -35,7 +35,7 @@ class Swiftype_Search_Geolocation {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      Plugin_Name_Loader    $loader    Maintains and registers all hooks for the plugin.
+	 * @var      Swiftype_Search_Geolocation_Loader    $loader    Maintains and registers all hooks for the plugin.
 	 */
 	protected $loader;
 
@@ -44,9 +44,9 @@ class Swiftype_Search_Geolocation {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      string    $plugin_name    The string used to uniquely identify this plugin.
+	 * @var      string    $swiftype_search_geolocation    The string used to uniquely identify this plugin.
 	 */
-	protected $plugin_name;
+	protected $swiftype_search_geolocation;
 
 	/**
 	 * The current version of the plugin.
@@ -68,7 +68,7 @@ class Swiftype_Search_Geolocation {
 	 */
 	public function __construct() {
 
-		$this->plugin_name = 'plugin-name';
+		$this->swiftype_search_geolocation = 'swiftype-search-geolocation';
 		$this->version = '1.0.0';
 
 		$this->load_dependencies();
@@ -83,10 +83,10 @@ class Swiftype_Search_Geolocation {
 	 *
 	 * Include the following files that make up the plugin:
 	 *
-	 * - Plugin_Name_Loader. Orchestrates the hooks of the plugin.
-	 * - Plugin_Name_i18n. Defines internationalization functionality.
-	 * - Plugin_Name_Admin. Defines all hooks for the dashboard.
-	 * - Plugin_Name_Public. Defines all hooks for the public side of the site.
+	 * - Swiftype_Search_Geolocation_Loader. Orchestrates the hooks of the plugin.
+	 * - Swiftype_Search_Geolocation_i18n. Defines internationalization functionality.
+	 * - Swiftype_Search_Geolocation_Admin. Defines all hooks for the dashboard.
+	 * - Swiftype_Search_Geolocation_Public. Defines all hooks for the public side of the site.
 	 *
 	 * Create an instance of the loader which will be used to register the hooks
 	 * with WordPress.
@@ -107,12 +107,6 @@ class Swiftype_Search_Geolocation {
 		 * of the plugin.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-swiftype-search-geolocation-i18n.php';
-
-		/**
-		 * The class responsible for extending the Swiftype plugin class to allow 
-		 * Geolocation.
-		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-swiftype-search-geolocation-extender.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the Dashboard.
@@ -141,7 +135,7 @@ class Swiftype_Search_Geolocation {
 	private function set_locale() {
 
 		$plugin_i18n = new Swiftype_Search_Geolocation_i18n();
-		$plugin_i18n->set_domain( $this->get_plugin_name() );
+		$plugin_i18n->set_domain( $this->get_swiftype_search_geolocation() );
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 
@@ -156,7 +150,7 @@ class Swiftype_Search_Geolocation {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new Swiftype_Search_Geolocation_Admin( $this->get_plugin_name(), $this->get_version() );
+		$plugin_admin = new Swiftype_Search_Geolocation_Admin( $this->get_swiftype_search_geolocation(), $this->get_version() );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
@@ -172,7 +166,7 @@ class Swiftype_Search_Geolocation {
 	 */
 	private function define_public_hooks() {
 
-		$plugin_public = new Swiftype_Search_Geolocation_Public( $this->get_plugin_name(), $this->get_version() );
+		$plugin_public = new Swiftype_Search_Geolocation_Public( $this->get_swiftype_search_geolocation(), $this->get_version() );
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
@@ -195,8 +189,8 @@ class Swiftype_Search_Geolocation {
 	 * @since     1.0.0
 	 * @return    string    The name of the plugin.
 	 */
-	public function get_plugin_name() {
-		return $this->plugin_name;
+	public function get_swiftype_search_geolocation() {
+		return $this->swiftype_search_geolocation;
 	}
 
 	/**

@@ -6,8 +6,8 @@
  * @link       http://example.com
  * @since      1.0.0
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
+ * @package    Swiftype_Search_Geolocation
+ * @subpackage Swiftype_Search_Geolocation/public
  */
 
 /**
@@ -16,9 +16,9 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the dashboard-specific stylesheet and JavaScript.
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/admin
- * @author     Your Name <email@example.com>
+ * @package    Swiftype_Search_Geolocation
+ * @subpackage Swiftype_Search_Geolocation/public
+ * @author     Flynn O'Connor <flynnoconnor@gmail.com>
  */
 class Swiftype_Search_Geolocation_Public {
 
@@ -27,9 +27,9 @@ class Swiftype_Search_Geolocation_Public {
 	 *
 	 * @since    1.0.0
 	 * @access   private
-	 * @var      string    $name    The ID of this plugin.
+	 * @var      string    $swiftype_search_geolocation    The ID of this plugin.
 	 */
-	private $name;
+	private $swiftype_search_geolocation;
 
 	/**
 	 * The version of this plugin.
@@ -44,12 +44,12 @@ class Swiftype_Search_Geolocation_Public {
 	 * Initialize the class and set its properties.
 	 *
 	 * @since    1.0.0
-	 * @var      string    $name       The name of the plugin.
+	 * @var      string    $swiftype_search_geolocation       The name of the plugin.
 	 * @var      string    $version    The version of this plugin.
 	 */
-	public function __construct( $name, $version ) {
+	public function __construct( $swiftype_search_geolocation, $version ) {
 
-		$this->name = $name;
+		$this->name = $swiftype_search_geolocation;
 		$this->version = $version;
 
 		add_action( 'init', array( $this, 'register_swiftype_geolocation_shortcodes' ) );
@@ -66,18 +66,6 @@ class Swiftype_Search_Geolocation_Public {
 	 */
 	public function enqueue_styles() {
 
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Plugin_Name_Public_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Plugin_Name_Public_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
-
 		wp_enqueue_style( $this->name, plugin_dir_url( __FILE__ ) . 'css/swiftype-search-geolocation-public.css', array(), $this->version, 'all' );
 
 	}
@@ -93,6 +81,13 @@ class Swiftype_Search_Geolocation_Public {
 
 		
 	}
+
+	/**
+	 * Method for verifying Latitude and Longitude are set properly.
+	 * @param float $lat 
+	 * @param float $long 
+	 * @return bool
+	 */
 	public function verify_location($lat, $long){
 		if( empty($lat) || empty($long) || !is_numeric($lat) || !is_numeric($long) ){
 			return false; 

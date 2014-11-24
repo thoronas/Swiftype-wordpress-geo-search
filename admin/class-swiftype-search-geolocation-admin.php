@@ -6,8 +6,8 @@
  * @link       http://example.com
  * @since      1.0.0
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
+ * @package    Swiftype_Search_Geolocation
+ * @subpackage Swiftype_Search_Geolocation/admin
  */
 
 /**
@@ -16,9 +16,9 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the dashboard-specific stylesheet and JavaScript.
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/admin
- * @author     Your Name <email@example.com>
+ * @package    Swiftype_Search_Geolocation
+ * @subpackage Swiftype_Search_Geolocation/admin
+ * @author     Flynn O'Connor <flynnoconnor@gmail.com>
  */
 class Swiftype_Search_Geolocation_Admin {
 
@@ -27,9 +27,9 @@ class Swiftype_Search_Geolocation_Admin {
 	 *
 	 * @since    1.0.0
 	 * @access   private
-	 * @var      string    $name    The ID of this plugin.
+	 * @var      string    $swiftype_search_geolocation    The ID of this plugin.
 	 */
-	private $name;
+	private $swiftype_search_geolocation;
 
 	/**
 	 * The version of this plugin.
@@ -47,9 +47,9 @@ class Swiftype_Search_Geolocation_Admin {
 	 * @var      string    $name       The name of this plugin.
 	 * @var      string    $version    The version of this plugin.
 	 */
-	public function __construct( $name, $version ) {
+	public function __construct( $swiftype_search_geolocation, $version ) {
 
-		$this->name = $name;
+		$this->swiftype_search_geolocation = $swiftype_search_geolocation;
 		$this->version = $version;
 
 		add_action('add_meta_boxes', array( $this, 'swiftype_geolocation_meta_box_register' ) );
@@ -68,7 +68,6 @@ class Swiftype_Search_Geolocation_Admin {
 	}
 	/**
 	 * Added submenu page to the Swiftype Panel in the admin. 
-	 * @return type
 	 */
 	public static function menu_extension(){
 
@@ -164,7 +163,6 @@ class Swiftype_Search_Geolocation_Admin {
 
 	/**
 	 * Output javascript modal JS template 
-	 * @return type
 	 */
 	public function output_modal_template(){
 		include_once plugin_dir_path( __FILE__ ) . '/partials/modal-template.php'; 
@@ -197,47 +195,19 @@ class Swiftype_Search_Geolocation_Admin {
 
 	/**
 	 * Register the stylesheets for the Dashboard.
-	 *
-	 * @since    1.0.0
 	 */
 	public function enqueue_styles() {
 
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Plugin_Name_Admin_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Plugin_Name_Admin_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
-
-		wp_enqueue_style( $this->name, plugin_dir_url( __FILE__ ) . 'css/swiftype-search-geolocation-admin.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->swiftype_search_geolocation, plugin_dir_url( __FILE__ ) . 'css/swiftype-search-geolocation-admin.css', array(), $this->version, 'all' );
 
 	}
 
 	/**
 	 * Register the JavaScript for the dashboard.
-	 *
-	 * @since    1.0.0
 	 */
 	public function enqueue_scripts() {
 
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Plugin_Name_Admin_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Plugin_Name_Admin_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
-
-		wp_enqueue_script( $this->name, plugin_dir_url( __FILE__ ) . 'js/swiftype-search-geolocation-admin.js', array( 'jquery' ), $this->version, FALSE );
+		wp_enqueue_script( $this->swiftype_search_geolocation, plugin_dir_url( __FILE__ ) . 'js/swiftype-search-geolocation-admin.js', array( 'jquery' ), $this->version, FALSE );
 	    wp_enqueue_script( 'Swiftype-googlemaps-JS', 'https://maps.googleapis.com/maps/api/js', null, '0.1', FALSE );
 
 	}
@@ -268,11 +238,13 @@ class Swiftype_Search_Geolocation_Admin {
 
 	}
 
-	/* 
-	 * Add geolocation meta data to document stored in swiftype. 
-	 * This can then be queried by [insert function name here]
+	/**
+	 * Add geolocation meta data to document stored in swiftype.
+	 * 
+	 * @param object $document 
+	 * @param object $post 
+	 * @return mixed
 	 */
-
 	public function swiftype_geolocation_document_data( $document, $post ) {
 	    
 	    $lat = get_post_meta($post->ID, 'swiftype-location-lat', true); 
