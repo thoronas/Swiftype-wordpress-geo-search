@@ -1,20 +1,10 @@
 <?php
 
 /**
- * The public-facing functionality of the plugin.
+ * Rendering of the shortcode and search form on the front end
  *
- * @link       http://example.com
- * @since      1.0.0
- *
- * @package    Swiftype_Search_Geolocation
- * @subpackage Swiftype_Search_Geolocation/public
- */
-
-/**
- * The public-facing functionality of the plugin.
- *
- * Defines the plugin name, version, and two examples hooks for how to
- * enqueue the dashboard-specific stylesheet and JavaScript.
+ * This class handles the shortcode rendering and the search functionality
+ * on the front end. Utilizes the Swiftype API and adds custom filters.
  *
  * @package    Swiftype_Search_Geolocation
  * @subpackage Swiftype_Search_Geolocation/public
