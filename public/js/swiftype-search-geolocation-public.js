@@ -30,6 +30,7 @@
 	function process_map_markers(markers){
 		$.each( markers, function( key, val ) {
 			var LocLatlng = new google.maps.LatLng( val.geolocation.lat , val.geolocation.lon );
+			var infowindow = new google.maps.InfoWindow({ maxWidth: 350 });
 
 			var marker = new google.maps.Marker({
 				position: LocLatlng,
@@ -61,7 +62,7 @@
 				// send Latitude and Longitude to callback function
 				callback.call(location);
 			}else{
-				console.log('geocode was not successful for the following reason: ' + status);
+				alert('geocode was not successful for the following reason: ' + status);
 			}
 		} ); 
 	}

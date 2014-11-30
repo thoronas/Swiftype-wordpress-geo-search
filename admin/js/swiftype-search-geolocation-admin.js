@@ -15,27 +15,25 @@
 				// send Latitude and Longitude to callback function
 				callback.call(location);
 			}else{
-				console.log('geocode was not successful for the following reason: ' + status);
+				alert('geocode was not successful for the following reason: ' + status);
 			}
 		} ); 
 	}
 
 	function render_map(geo_lat, geo_long) {
 		var canvas = $( '#swiftype-geo-location #swiftype-map')[0];
-		if(canvas){
-			if(geo_lat.length > 0 && geo_long.length > 0 ){
-				var the_loc = new google.maps.LatLng( geo_lat, geo_long);
-				var options = {
-				  zoom: 8, 
-				  center: the_loc
-				};
-				var map = new google.maps.Map(canvas, options);
-				var marker = new google.maps.Marker({
-				  map: map,
-				  zoom: 6,
-				  position: the_loc
-				});
-			}
+		if( canvas && geo_lat && geo_long ){
+			var the_loc = new google.maps.LatLng( geo_lat, geo_long);
+			var options = {
+				zoom: 8, 
+				center: the_loc
+			};
+			var map = new google.maps.Map(canvas, options);
+			var marker = new google.maps.Marker({
+				map: map,
+				zoom: 6,
+				position: the_loc
+			});
 		}
 	}
 
