@@ -7,16 +7,16 @@
 
 <div class="swiftype-modal-wrapper">
 	<div class="swiftype-modal">
-		<h1>Select center of map.</h1>
+		<h3>Set Center of Map</h3>
 		<form id="swiftype-geo-shortcode">
 			<label for="swiftype-shortcode-address">Address:
-				<input id="swiftype-shortcode-address" name="swiftype-shortcode-address" type="text" />
+				<input id="swiftype-shortcode-address" class="sw-full-length" name="swiftype-shortcode-address" type="text" />
 			</label>
 			<!-- Hidden fields for storing google geo coder data. -->
 			<input id="swiftype-shortcode-lat" disabled name="swiftype-shortcode-lat" type="hidden" />
 			<input id="swiftype-shortcode-long" disabled name="swiftype-shortcode-long" type="hidden" />
 
-			<label for="swiftype-shortcode-zoom">Map Zoom Level: 
+			<label for="swiftype-shortcode-zoom" class="swiftype-half-length">Map Zoom Level: 
 				<select id="swiftype-shortcode-zoom" name="swiftype-shortcode-zoom">
 					<option value="0">0 (whole world) </option>
 					<option value="1">1</option>
@@ -40,7 +40,7 @@
 					<option value="19">19 (individual buildings)</option>
 				</select>
 			</label>
-			<label for="swiftype-shortcode-radius">Search radius distance: 
+			<label for="swiftype-shortcode-radius" class="swiftype-half-length">Search radius distance: 
 				<select id="swiftype-shortcode-radius" name="swiftype-shortcode-radius">
 					<option value="1">1km</option>
 					<option value="5" selected="selected">5km</option>
@@ -50,16 +50,13 @@
 					<option value="100">100km</option>
 				</select>				
 			</label>
-			<label for="swiftype-shortcode-searchform"> 
-				Include Search Form:
-				<input type="checkbox" id="swiftype-shortcode-searchform" checked label="Include Searchform:" name="swiftype-shortcode-searchform">				
-			</label>
 			<div class="swiftype-post-types">
+				<h3 class="swiftype-divider">Include Post Types</h3>
 				<?php 
 					$active_cpts = get_option( 'swiftype-search-geolocation-post-types' ); 
 					foreach($active_cpts as $cpt){
 				?>
-					<label for="swiftype-shortcode-posttypes-<?php echo esc_attr( $cpt );?>">
+					<label class="swiftype-third-length" for="swiftype-shortcode-posttypes-<?php echo esc_attr( $cpt );?>">
 						<?php echo esc_attr( $cpt );?>
 						<input type="checkbox" checked value="<?php echo esc_attr( $cpt );?>" name="swiftype-shortcode-posttypes-<?php echo esc_attr( $cpt );?>">
 					</label>
@@ -68,6 +65,12 @@
 					}
 				?>
 			</div>
+
+			<label for="swiftype-shortcode-searchform"> 
+				<h3 class="swiftype-divider">Include Search Form:</h3>
+				<input type="checkbox" id="swiftype-shortcode-searchform" checked label="Include Searchform:" name="swiftype-shortcode-searchform">				
+			</label>
+
 			<button id="insert-swiftype-shortcode" class="button">Insert Shortcode</button>		
 		</form>
 	</div>
