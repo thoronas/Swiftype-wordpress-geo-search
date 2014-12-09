@@ -2,11 +2,27 @@
 	height: 300px; 
 	width: 100%;
 }
-
 #swiftype-map img {
- 	max-width: none; 
- }
-
- .swiftype-map-marker {
- 	color: #0000EE; 
- }
+	max-width: none; 
+}
+.swiftype-map-marker {
+	color: #0000EE; 
+}
+.swiftype-geo-search-form {
+	margin-bottom: 10px; 
+}
+.swiftype-geo-search-form input[ type="text" ]{
+	width: 80%;
+	height: 30px;
+	margin-right: -3px; 
+}
+.swiftype-geo-search-form input[ type="submit" ]{
+	width: 20%;
+	height: 30px; 
+	background: #ccc; 
+	color: #000;
+	border: none; 
+}
+.swiftype-geo-search-form input[ type="submit" ]:hover {
+	background: #bbb;
+}
