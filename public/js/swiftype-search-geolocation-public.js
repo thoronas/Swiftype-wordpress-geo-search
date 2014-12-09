@@ -3,7 +3,7 @@
 	
 	var map, marker_lat, marker_long; 
 	var swiftype_map_markers = []; 
-
+	var ajax_loading = false; 
 	function init(data){
 		var canvas = jQuery("#swiftype-map").get(0);
 		var infowindow = new google.maps.InfoWindow();
@@ -51,20 +51,27 @@
 	/* 
 	 *	Function gets latitude and longitude from Google maps api
 	 */
-	function geocode_address(address, callback){
-		var $geocoder = new google.maps.Geocoder();
-		$geocoder.geocode( { 'address' : address }, function(results, status) {
-			if(status == google.maps.GeocoderStatus.OK) {
-				var location = {
-					geo_lat: 	results[0].geometry.location.lat(),
-					geo_long: 	results[0].geometry.location.lng()
+	function geocode_address(address, callback){		
+		// prevent multiple submissions until current one is done. 
+		if(ajax_loading === false){
+
+			ajax_loading = true; 
+			var $geocoder = new google.maps.Geocoder();
+		
+			$geocoder.geocode( { 'address' : address }, function(results, status) {
+				if(status == google.maps.GeocoderStatus.OK) {
+					var location = {
+						geo_lat: 	results[0].geometry.location.lat(),
+						geo_long: 	results[0].geometry.location.lng()
+					}
+					// send Latitude and Longitude to callback function
+					callback.call(location);
+				}else{
+					alert('geocode was not successful for the following reason: ' + status);
 				}
-				// send Latitude and Longitude to callback function
-				callback.call(location);
-			}else{
-				alert('geocode was not successful for the following reason: ' + status);
-			}
-		} ); 
+			} ); 
+
+		}
 	}
 
 	//clear old markers from marker array for looking at closer 
@@ -83,6 +90,7 @@
 
 		deleteOverlays();
 		process_map_markers( data );
+		ajax_loading = false; 
 	}
 
 	function search_error( data ){
