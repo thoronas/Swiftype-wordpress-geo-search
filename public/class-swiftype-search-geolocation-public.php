@@ -99,7 +99,7 @@ class Swiftype_Search_Geolocation_Public {
 		extract( shortcode_atts(array(
 			'lat' 			=> '',
 			'long' 			=> '', 
-			'zoom' 			=> '5', 
+			'zoom' 			=> '9', 
 			'distance'		=> '50',
 			'search_form'	=> true,
 			'post_types'	=> implode(",", get_option( 'swiftype-search-geolocation-post-types' ) ) 
