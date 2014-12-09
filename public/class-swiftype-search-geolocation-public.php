@@ -102,7 +102,7 @@ class Swiftype_Search_Geolocation_Public {
 			'zoom' 			=> '5', 
 			'distance'		=> '50',
 			'search_form'	=> true,
-			'post_types'	=> get_option( 'swiftype-search-geolocation-post-types' ), 
+			'post_types'	=> implode(",", get_option( 'swiftype-search-geolocation-post-types' ) ) 
 
 		), $atts) );
 
@@ -141,7 +141,7 @@ class Swiftype_Search_Geolocation_Public {
 	}
 
 	/**
-	 * Queries Swiftype API for searchå results
+	 * Queries Swiftype API for search results
 	 * 
 	 * Searches for indexed posts using swiftype geo filter to return posts
 	 * within specified distance from given latitude and longitude. 
